@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'Tools'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of Tools.'
+  s.summary          = 'Tools.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,20 +18,26 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+TODO: Add long description of Tools.
                        DESC
 
-  s.homepage         = 'https://github.com/YunsChou/Tools'
+  s.homepage         = 'https://github.com/LovePlayModule/Tools'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'YunsChou' => '2647754496@qq.com' }
-  s.source           = { :git => 'https://github.com/YunsChou/Tools.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/LovePlayModule/Tools.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'Tools/Classes/**/*'
-  
+  # s.source_files = 'Tools/Classes/**/*'
+  s.default_subspecs = 'Macros'
+
+  s.subspec 'Macros' do |ss|
+    ss.source_files = 'Tools/Classes/Macros/**/*'
+  end
+
+
   # s.resource_bundles = {
   #   'Tools' => ['Tools/Assets/*.png']
   # }
